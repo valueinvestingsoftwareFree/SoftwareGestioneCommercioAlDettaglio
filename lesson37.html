@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecture 37. Registrazione degli acquisti nell'app mobile</title>
+
+<style>
+    body{
+        margin:0;
+        padding:0;
+        font-family:Arial, sans-serif;
+        background:#0f172a;
+        color:white;
+        min-height:100vh;
+    }
+
+    .container{
+        width:90%;
+        max-width:1200px;
+        margin:40px auto;
+        background:#111827;
+        padding:50px;
+        border-radius:20px;
+        box-shadow:0 0 30px rgba(0,0,0,0.45);
+    }
+
+    h1{
+        font-size:2.5rem;
+        margin-bottom:30px;
+        color:#60a5fa;
+        line-height:1.4;
+        text-align:center;
+    }
+
+    h2{
+        color:#93c5fd;
+        margin-top:45px;
+        margin-bottom:20px;
+        font-size:1.6rem;
+    }
+
+    p{
+        font-size:1.1rem;
+        line-height:1.9;
+        color:#d1d5db;
+        margin-bottom:22px;
+    }
+
+    ul{
+        color:#d1d5db;
+        line-height:1.9;
+        font-size:1.05rem;
+        padding-left:25px;
+    }
+
+    li{
+        margin-bottom:12px;
+    }
+
+    .highlight{
+        color:#93c5fd;
+        font-weight:bold;
+    }
+
+    .section{
+        margin-top:45px;
+        padding-top:10px;
+    }
+
+    .button{
+        display:inline-block;
+        margin:12px 10px 0 0;
+        padding:14px 28px;
+        background:#2563eb;
+        color:white;
+        text-decoration:none;
+        border-radius:10px;
+        font-size:1rem;
+        transition:0.3s;
+    }
+
+    .button:hover{
+        background:#1d4ed8;
+        transform:translateY(-2px);
+    }
+
+    .button-green{
+        background:#059669;
+    }
+
+    .button-green:hover{
+        background:#047857;
+    }
+
+    .note{
+        background:#0b1220;
+        border-left:5px solid #60a5fa;
+        padding:25px;
+        border-radius:12px;
+        margin-top:30px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Lezione 37. Registrazione degli acquisti nell'app mobile</h1>
+
+    <p>
+        In questa lezione imparerai come registrare 
+        <span class="highlight">gli acquisti direttamente dall'app mobile Android</span>, 
+        consentendo alla tua azienda di registrare le transazioni con i fornitori immediatamente dal campo, magazzino, negozio, centro di distribuzione, strutture dei fornitori o qualsiasi altra posizione operativa remota.
+    </p>
+
+    <p>
+        Uno dei maggiori vantaggi degli acquisti da mobile è la possibilità di acquisire informazioni 
+        <span class="highlight">nel momento esatto in cui avviene la transazione</span>. 
+        Invece di scrivere appunti su carta e reinserire tutto manualmente nel sistema desktop, l'acquisto può essere registrato istantaneamente dal dispositivo Android, riducendo i ritardi, migliorando la precisione e prevenendo transazioni dimenticate.
+    </p>
+
+    <p>
+        Questa funzionalità è estremamente utile per le aziende che movimentano continuamente inventario, lavorano con fornitori esterni, ricevono merce fuori ufficio, acquistano prodotti da diversi venditori durante la giornata o operano in magazzini, cantieri, fabbriche, aziende agricole o ambienti retail.
+    </p>
+
+    <div class="section">
+
+        <h2>Perché la registrazione mobile degli acquisti è così importante</h2>
+
+        <p>
+            I metodi tradizionali di registrazione degli acquisti spesso creano problemi operativi. I dipendenti possono dimenticare quantità, perdere fatture, ricordare prezzi in modo errato o ritardare l’aggiornamento dell’inventario fino al ritorno in ufficio. Questi ritardi possono causare livelli di magazzino imprecisi, decisioni di acquisto errate, incoerenze contabili e confusione nei flussi di cassa.
+        </p>
+
+        <p>
+            Registrando gli acquisti direttamente dall'app Android, le informazioni entrano immediatamente nel sistema aziendale. Ciò significa che livelli di inventario, saldi dei fornitori, costi dei prodotti e storico degli acquisti rimangono costantemente aggiornati quasi in tempo reale.
+        </p>
+
+        <p>
+            La possibilità di lavorare direttamente da un dispositivo mobile aiuta anche le aziende a operare più velocemente e in modo più professionale. Un addetto agli acquisti può trovarsi accanto al fornitore, verificare fisicamente i prodotti, confermare visivamente le quantità, controllare i prezzi immediatamente e registrare l’intera operazione senza tornare in ufficio.
+        </p>
+
+        <p>
+            La registrazione mobile degli acquisti è particolarmente utile per:
+        </p>
+
+        <ul>
+            <li>Negozi al dettaglio che acquistano inventario dai distributori.</li>
+            <li>Venditori che acquistano prodotti durante gli spostamenti.</li>
+            <li>Ristoranti che ricevono forniture alimentari ogni giorno.</li>
+            <li>Aziende di costruzione che acquistano materiali in cantiere.</li>
+            <li>Aziende agricole che acquistano forniture in aree remote.</li>
+            <li>Magazzini che ricevono merce dai camion.</li>
+            <li>Tecnici sul campo che acquistano pezzi di ricambio.</li>
+            <li>Aziende di importazione e distribuzione con movimenti di inventario.</li>
+            <li>Aziende che operano in più sedi.</li>
+        </ul>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Aggiornamenti dell'inventario in tempo reale</h2>
+
+        <p>
+            Ogni acquisto registrato dall'app mobile può influenzare immediatamente le quantità di inventario nel sistema aziendale. Questo è estremamente importante perché la precisione dell’inventario impatta quasi ogni area operativa dell’azienda.
+        </p>
+
+        <p>
+            Un inventario accurato aiuta le aziende a:
+        </p>
+
+        <ul>
+            <li>Conoscere la disponibilità attuale dei prodotti.</li>
+            <li>Evitare la sovravendita.</li>
+            <li>Prevenire carenze di magazzino.</li>
+            <li>Identificare rapidamente le scorte basse.</li>
+            <li>Calcolare con maggiore precisione i punti di riordino.</li>
+            <li>Migliorare la pianificazione degli acquisti.</li>
+            <li>Ridurre acquisti urgenti.</li>
+            <li>Aumentare l’efficienza operativa.</li>
+            <li>Migliorare il servizio clienti.</li>
+        </ul>
+
+        <p>
+            Poiché gli acquisti possono essere registrati immediatamente da dispositivi Android, le informazioni di inventario diventano molto più dinamiche e affidabili rispetto ai sistemi manuali ritardati.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Costi di acquisto e controllo finanziario</h2>
+
+        <p>
+            Registrare gli acquisti dall'app mobile non è utile solo per il controllo delle scorte. È anche fondamentale per l’analisi finanziaria e la gestione dei costi.
+        </p>
+
+        <p>
+            Ogni transazione di acquisto memorizza informazioni operative e finanziarie importanti tra cui:
+        </p>
+
+        <ul>
+            <li>Dettagli del fornitore.</li>
+            <li>Data e ora dell'acquisto.</li>
+            <li>Quantità dei prodotti.</li>
+            <li>Costi di acquisto.</li>
+            <li>Valore totale della transazione.</li>
+            <li>Informazioni storiche sui prezzi.</li>
+            <li>Metodi di pagamento.</li>
+            <li>Registro attività utenti.</li>
+            <li>Storico movimenti di inventario.</li>
+        </ul>
+
+        <p>
+            Queste informazioni diventano estremamente utili per analisi successive. Le aziende possono identificare quali fornitori offrono i prezzi migliori, quali prodotti stanno aumentando di costo, come i costi influenzano la redditività e come evolve l’investimento in inventario mese dopo mese.
+        </p>
+
+        <p>
+            Una registrazione accurata degli acquisti migliora anche la coerenza contabile, la reportistica finanziaria, il monitoraggio delle spese e la trasparenza operativa.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Lavorare direttamente presso il fornitore</h2>
+
+        <p>
+            Uno dei maggiori vantaggi dell’app mobile Android è la mobilità stessa. Gli acquisti possono essere registrati direttamente mentre si è nel magazzino, negozio, fabbrica, ufficio o centro di distribuzione del fornitore.
+        </p>
+
+        <p>
+            Questo consente all’utente o al proprietario dell’azienda di:
+        </p>
+
+        <ul>
+            <li>Confrontare fisicamente i prodotti.</li>
+            <li>Verificare immediatamente la qualità.</li>
+            <li>Controllare le condizioni di imballaggio.</li>
+            <li>Confermare visivamente le quantità ricevute.</li>
+            <li>Validare subito le fatture.</li>
+            <li>Correggere errori di prezzo prima di lasciare il fornitore.</li>
+            <li>Aggiornare il sistema senza attese.</li>
+            <li>Ridurre errori di trascrizione.</li>
+            <li>Migliorare la velocità operativa.</li>
+        </ul>
+
+        <p>
+            Questo flusso mobile crea un processo di acquisto molto più moderno ed efficiente rispetto ai metodi cartacei o ai sistemi desktop ritardati.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Vantaggi offline e local-first</h2>
+
+        <p>
+            L’ecosistema software utilizzato in questo corso segue una 
+            <span class="highlight">filosofia local-first</span>. 
+            Il sistema desktop funziona sull’infrastruttura dell’utente e l’app Android comunica con l’ambiente aziendale senza dipendere da costosi abbonamenti cloud.
+        </p>
+
+        <p>
+            Questo approccio offre vantaggi importanti:
+        </p>
+
+        <ul>
+            <li>Maggiore controllo aziendale sulle informazioni.</li>
+            <li>Riduzione dei costi ricorrenti.</li>
+            <li>Nessuna dipendenza da costosi abbonamenti SaaS.</li>
+            <li>Maggiore privacy dei dati operativi.</li>
+            <li>Proprietà diretta dei database aziendali.</li>
+            <li>Elevata flessibilità di personalizzazione.</li>
+            <li>Scalabilità professionale dell’azienda.</li>
+        </ul>
+
+        <p>
+            Molte piccole e medie imprese preferiscono questa architettura perché consente indipendenza operativa pur beneficiando della tecnologia mobile moderna.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Sincronizzazione tra desktop e mobile</h2>
+
+        <p>
+            Gli acquisti registrati nell’app Android diventano parte dello stesso ecosistema operativo utilizzato dal software desktop. Ciò significa che le informazioni registrate dal dispositivo mobile possono essere successivamente analizzate, corrette, revisionate e controllate dal sistema desktop.
+        </p>
+
+        <p>
+            Questa integrazione consente alle aziende di combinare:
+        </p>
+
+        <ul>
+            <li>Flessibilità operativa mobile.</li>
+            <li>Potenza analitica desktop.</li>
+            <li>Gestione centralizzata dell’inventario.</li>
+            <li>Basi dati unificate dei fornitori.</li>
+            <li>Sistemi di reportistica integrati.</li>
+            <li>Analisi storica degli acquisti.</li>
+            <li>Tracciamento finanziario avanzato.</li>
+        </ul>
+
+        <p>
+            Il risultato è un sistema aziendale ibrido in grado di operare efficientemente sia dentro che fuori dall’ufficio.
+        </p>
+
+    </div>
+
+    <div class="note">
+
+        <p>
+            All’interno del corso Udemy imparerai passo dopo passo come creare documenti di acquisto dall’app Android, selezionare fornitori, aggiungere prodotti, definire quantità, registrare costi, sincronizzare informazioni con l’ambiente desktop e gestire i flussi di acquisto mobile con esempi pratici reali.
+        </p>
+
+    </div>
+
+    <div class="section">
+        <h2>Risorse e navigazione</h2>
+
+        <p>
+            Accedi a tutti i download del software, materiali del corso e risorse visive qui sotto.
+            Tutto fa parte di un <strong>ecosistema gratuito</strong> con supporto gratuito e miglioramento continuo guidato dai feedback.
+        </p>
+
+        <a class="button" href="https://www.dropbox.com/scl/fi/w857cfimlerq19gtxyxo9/Stocks.rar?rlkey=kn06ugzajdyi4suja1hboe92u&st=96866jmr&dl=1">
+            Scarica software
+        </a>
+
+        <a class="button" href="Contenido.html">
+            Programma completo
+        </a>
+
+        <a class="button" href="desktop.html">
+            Immagini desktop
+        </a>
+
+        <a class="button" href="app.html">
+            Immagini app mobile
+        </a>
+
+        <a class="button" href="https://www.udemy.com/course/free-tool-for-small-businesses-sales-purchases-and-stock/">
+            Corso (Inglese)
+        </a>
+
+        <a class="button" href="https://www.udemy.com/course/outil-gratuit-pour-entreprises-ventes-achats-et-stocks/">
+            Corso (Francese)
+        </a>
+
+        <a class="button" href="https://www.udemy.com/course/strumento-gratuito-per-imprese-acquisti-vendite-magazzino/">
+            Corso (Italiano)
+        </a>
+
+        <a class="button" href="https://www.udemy.com/course/ferramenta-gratuita-para-empresas-compras-vendas-estoque/">
+            Corso (Portoghese)
+        </a>
+
+        <a class="button button-green" href="index.html">
+            Vai alla pagina principale
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
