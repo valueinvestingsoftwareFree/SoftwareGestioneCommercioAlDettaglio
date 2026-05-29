@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecture 43. Generare backup del database SQLite</title>
+
+<style>
+    body{
+        margin:0;
+        padding:0;
+        font-family:Arial, sans-serif;
+        background:#0f172a;
+        color:white;
+    }
+
+    .wrapper{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        padding:40px 0;
+    }
+
+    .container{
+        width:90%;
+        max-width:1100px;
+        background:#111827;
+        padding:50px;
+        border-radius:18px;
+        box-shadow:0 0 25px rgba(0,0,0,0.45);
+    }
+
+    h1{
+        font-size:2.4rem;
+        margin-bottom:30px;
+        color:#60a5fa;
+        line-height:1.4;
+        text-align:center;
+    }
+
+    h2{
+        color:#93c5fd;
+        margin-top:45px;
+        margin-bottom:20px;
+        font-size:1.6rem;
+    }
+
+    p{
+        font-size:1.08rem;
+        line-height:1.9;
+        color:#d1d5db;
+        margin-bottom:22px;
+    }
+
+    .highlight{
+        color:#93c5fd;
+        font-weight:bold;
+    }
+
+    .important{
+        color:#86efac;
+        font-weight:bold;
+    }
+
+    ul{
+        margin-top:10px;
+        margin-bottom:25px;
+        padding-left:25px;
+    }
+
+    li{
+        margin-bottom:14px;
+        color:#d1d5db;
+        line-height:1.8;
+        font-size:1.04rem;
+    }
+
+    .section{
+        margin-top:40px;
+        padding-top:20px;
+        border-top:1px solid rgba(255,255,255,0.08);
+    }
+
+    .buttons{
+        margin-top:35px;
+        display:flex;
+        flex-wrap:wrap;
+        gap:16px;
+    }
+
+    .button{
+        display:inline-block;
+        padding:14px 26px;
+        background:#2563eb;
+        color:white;
+        text-decoration:none;
+        border-radius:10px;
+        font-size:1rem;
+        transition:0.3s;
+    }
+
+    .button:hover{
+        background:#1d4ed8;
+        transform:translateY(-2px);
+    }
+
+    .button-green{
+        background:#16a34a;
+    }
+
+    .button-green:hover{
+        background:#15803d;
+    }
+
+    .note-box{
+        background:#0b1220;
+        border-left:5px solid #60a5fa;
+        padding:25px;
+        border-radius:12px;
+        margin-top:30px;
+        margin-bottom:30px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="container">
+
+    <h1>Lecture 43. Generare backup del database SQLite</h1>
+
+    <p>
+        In questa lezione imparerai come generare backup sicuri del 
+        <span class="highlight">database SQLite utilizzato dall’applicazione mobile Android</span>.
+    </p>
+
+    <p>
+        La generazione dei backup del database è una delle responsabilità operative e tecniche più importanti in qualsiasi sistema aziendale serio.
+    </p>
+
+    <p>
+        Il database SQLite all’interno dell’app mobile può contenere informazioni operative estremamente preziose, tra cui vendite, acquisti, spese, inventario, saldi clienti, informazioni fornitori, incassi, attività finanziarie, cataloghi prodotti, operazioni di percorso e dati storici aziendali.
+    </p>
+
+    <div class="note-box">
+        <p>
+            Un dispositivo mobile può essere perso, danneggiato, rubato, formattato, corrotto o distrutto fisicamente in qualsiasi momento.
+        </p>
+
+        <p>
+            Senza una corretta strategia di backup, l’azienda può perdere 
+            <span class="important">mesi o addirittura anni di informazioni operative</span>.
+        </p>
+
+        <p>
+            Questa lezione si concentra su come proteggere la continuità aziendale tramite il backup sicuro del database SQLite dell’app Android.
+        </p>
+    </div>
+
+    <div class="section">
+
+        <h2>Perché i backup del database SQLite sono estremamente importanti</h2>
+
+        <p>
+            Il database SQLite funge da motore di archiviazione locale centrale dell’applicazione Android.
+        </p>
+
+        <p>
+            Ogni attività operativa importante eseguita dal dispositivo mobile può essere memorizzata nelle tabelle SQLite.
+        </p>
+
+        <p>
+            La perdita del database potrebbe significare la perdita di:
+        </p>
+
+        <ul>
+            <li>Storico vendite</li>
+            <li>Record clienti</li>
+            <li>Informazioni fornitori</li>
+            <li>Movimenti di magazzino</li>
+            <li>Registrazioni spese</li>
+            <li>Storico acquisti</li>
+            <li>Incassi e pagamenti</li>
+            <li>Attività di percorso</li>
+            <li>Statistiche aziendali</li>
+            <li>Note operative</li>
+            <li>Fotografie e riferimenti</li>
+            <li>Transazioni offline</li>
+            <li>Calcoli finanziari</li>
+            <li>Analisi storiche</li>
+        </ul>
+
+        <p>
+            I backup non sono opzionali nei sistemi professionali.
+            Sono un meccanismo critico di protezione contro disastri operativi.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Comprendere SQLite nell’app mobile</h2>
+
+        <p>
+            SQLite è un motore di database relazionale leggero integrato direttamente nelle applicazioni Android.
+        </p>
+
+        <p>
+            A differenza dei database cloud remoti, SQLite memorizza le informazioni localmente nel dispositivo mobile.
+        </p>
+
+        <p>
+            Questa architettura offre grandi vantaggi:
+        </p>
+
+        <ul>
+            <li>Funzionamento offline</li>
+            <li>Query locali veloci</li>
+            <li>Alte prestazioni mobile</li>
+            <li>Ridotta dipendenza da internet</li>
+            <li>Operatività portatile</li>
+            <li>Archiviazione efficiente</li>
+            <li>Indipendenza operativa</li>
+        </ul>
+
+        <p>
+            Tuttavia, poiché il database risiede fisicamente nello smartphone o tablet, il backup diventa assolutamente essenziale.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Rischi della mancata esecuzione dei backup</h2>
+
+        <p>
+            Molte aziende sottovalutano i backup fino a quando non si verifica una perdita di dati.
+        </p>
+
+        <p>
+            I rischi reali includono:
+        </p>
+
+        <ul>
+            <li>Furto del telefono</li>
+            <li>Guasto hardware</li>
+            <li>Cancellazione accidentale</li>
+            <li>Formattazione del dispositivo</li>
+            <li>Corruzione del sistema operativo</li>
+            <li>Corruzione dell’app</li>
+            <li>Danni allo storage</li>
+            <li>Errori di sincronizzazione</li>
+            <li>Errori umani</li>
+            <li>Infezioni malware</li>
+            <li>Danni fisici al dispositivo</li>
+            <li>Danni da acqua o urti</li>
+        </ul>
+
+        <p>
+            Senza backup, il recupero dei dati può diventare impossibile.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Informazioni preservabili con i backup</h2>
+
+        <p>
+            Il processo di backup può preservare lo stato completo dell’applicazione mobile.
+        </p>
+
+        <p>
+            A seconda dell’architettura, il backup SQLite può contenere:
+        </p>
+
+        <ul>
+            <li>Database completo delle vendite</li>
+            <li>Record di inventario</li>
+            <li>Tabelle spese</li>
+            <li>Saldi clienti</li>
+            <li>Operazioni fornitori</li>
+            <li>Storico incassi</li>
+            <li>Movimenti di cassa</li>
+            <li>Preferenze utente</li>
+            <li>Configurazioni applicazione</li>
+            <li>Storico sincronizzazioni</li>
+            <li>Record offline</li>
+            <li>Dati analitici aziendali</li>
+            <li>Informazioni finanziarie storiche</li>
+        </ul>
+
+        <p>
+            Questo consente il ripristino rapido delle operazioni in caso di problemi.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Architettura offline-first e importanza dei backup</h2>
+
+        <p>
+            Una delle caratteristiche principali dell’app è la filosofia offline-first.
+        </p>
+
+        <p>
+            L’app funziona anche senza internet perché i dati sono memorizzati localmente in SQLite.
+        </p>
+
+        <p>
+            Tuttavia, ciò significa che il database può contenere operazioni non ancora sincronizzate con il server SQL centrale.
+        </p>
+
+        <p>
+            Ad esempio:
+        </p>
+
+        <ul>
+            <li>Vendite effettuate in viaggio</li>
+            <li>Incassi offline</li>
+            <li>Operazioni di magazzino in zone rurali</li>
+            <li>Registrazioni clienti senza internet</li>
+            <li>Acquisti sul campo</li>
+            <li>Spese fuori ufficio</li>
+        </ul>
+
+        <p>
+            Se il dispositivo si guasta prima della sincronizzazione, il backup può essere l’unico modo per recuperare i dati.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Strategie professionali di backup</h2>
+
+        <p>
+            I sistemi professionali non devono mai dipendere da un solo backup.
+        </p>
+
+        <p>
+            Le strategie includono:
+        </p>
+
+        <ul>
+            <li>Backup locali</li>
+            <li>Backup su storage esterno</li>
+            <li>Backup su computer</li>
+            <li>Backup cloud</li>
+            <li>Backup automatici periodici</li>
+            <li>Versionamento dei backup</li>
+            <li>Piani di recupero</li>
+        </ul>
+
+        <p>
+            La ridondanza è fondamentale perché anche i backup possono corrodersi.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Continuità aziendale e disaster recovery</h2>
+
+        <p>
+            I backup servono principalmente alla continuità aziendale.
+        </p>
+
+        <p>
+            Senza recupero dei dati, l’azienda può subire:
+        </p>
+
+        <ul>
+            <li>Perdite finanziarie</li>
+            <li>Interruzioni operative</li>
+            <li>Incoerenze di inventario</li>
+            <li>Insoddisfazione clienti</li>
+            <li>Problemi contabili</li>
+            <li>Perdita di analisi storiche</li>
+            <li>Ridotta visibilità operativa</li>
+            <li>Confusione amministrativa</li>
+        </ul>
+
+        <p>
+            I backup SQLite proteggono da questi rischi.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Considerazioni tecniche sui backup</h2>
+
+        <p>
+            Il backup di SQLite non è una semplice copia casuale di file.
+        </p>
+
+        <p>
+            Deve considerare:
+        </p>
+
+        <ul>
+            <li>Integrità del database</li>
+            <li>Coerenza delle transazioni attive</li>
+            <li>Procedure di copia sicura</li>
+            <li>Permessi di storage</li>
+            <li>Verifica backup</li>
+            <li>Test di ripristino</li>
+            <li>Compatibilità versioni</li>
+            <li>Affidabilità storage</li>
+        </ul>
+
+        <p>
+            In questa lezione vedrai come generare backup in modo professionale.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>La sincronizzazione non sostituisce i backup</h2>
+
+        <p>
+            Sincronizzazione e backup non sono la stessa cosa.
+        </p>
+
+        <p>
+            Anche se i dati vengono sincronizzati con il server SQL, i backup locali restano fondamentali.
+        </p>
+
+        <p>
+            Situazioni possibili:
+        </p>
+
+        <ul>
+            <li>Sincronizzazione non ancora eseguita</li>
+            <li>Sincronizzazione parziale</li>
+            <li>Dati temporanei non inviati</li>
+            <li>Server non disponibile</li>
+            <li>Errore di sincronizzazione</li>
+        </ul>
+
+        <p>
+            Il backup è un ulteriore livello di protezione.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Sicurezza e proprietà dei dati</h2>
+
+        <p>
+            I backup locali garantiscono indipendenza operativa.
+        </p>
+
+        <p>
+            Le aziende mantengono il controllo diretto dei propri dati.
+        </p>
+
+        <p>
+            Vantaggi:
+        </p>
+
+        <ul>
+            <li>Maggiore controllo dati</li>
+            <li>Indipendenza operativa</li>
+            <li>Ripristino rapido</li>
+            <li>Conservazione storica</li>
+            <li>Flessibilità di recupero</li>
+            <li>Migliore disaster recovery</li>
+        </ul>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Obiettivi della lezione</h2>
+
+        <p>
+            Nel corso imparerai:
+        </p>
+
+        <ul>
+            <li>Come SQLite memorizza i dati</li>
+            <li>Come creare backup sicuri</li>
+            <li>Come proteggere i dati aziendali</li>
+            <li>Come copiare e salvare backup</li>
+            <li>Importanza della ridondanza</li>
+            <li>Disaster recovery</li>
+            <li>Importanza offline-first</li>
+            <li>Sincronizzazione e backup insieme</li>
+            <li>Riduzione perdita dati</li>
+            <li>Continuità operativa</li>
+        </ul>
+
+        <p>
+            Questa lezione è fondamentale per la sicurezza dei dati aziendali.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Risorse e navigazione</h2>
+
+        <p>
+            Accedi ai download, materiali e risorse qui sotto.
+        </p>
+
+        <div class="buttons">
+
+            <a class="button" href="https://www.dropbox.com/scl/fi/w857cfimlerq19gtxyxo9/Stocks.rar?rlkey=kn06ugzajdyi4suja1hboe92u&st=96866jmr&dl=1">
+                Scarica Software
+            </a>
+
+            <a class="button" href="Contenido.html">
+                Curriculum completo
+            </a>
+
+            <a class="button" href="desktop.html">
+                Immagini Desktop
+            </a>
+
+            <a class="button" href="app.html">
+                Immagini Mobile App
+            </a>
+
+            <a class="button" href="https://www.udemy.com/course/free-tool-for-small-businesses-sales-purchases-and-stock/">
+                Corso (Inglese)
+            </a>
+
+            <a class="button" href="https://www.udemy.com/course/outil-gratuit-pour-entreprises-ventes-achats-et-stocks/">
+                Corso (Francese)
+            </a>
+
+            <a class="button" href="https://www.udemy.com/course/strumento-gratuito-per-imprese-acquisti-vendite-magazzino/">
+                Corso (Italiano)
+            </a>
+
+            <a class="button" href="https://www.udemy.com/course/ferramenta-gratuita-para-empresas-compras-vendas-estoque/">
+                Corso (Portoghese)
+            </a>
+
+            <a class="button button-green" href="index.html">
+                Vai alla pagina principale
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
