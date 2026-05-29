@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lezione 36. Come Creare un Nuovo Articolo nell'App Mobile</title>
+
+<style>
+    body{
+        margin:0;
+        padding:0;
+        font-family:Arial, sans-serif;
+        background:#0f172a;
+        color:white;
+        min-height:100vh;
+    }
+
+    .container{
+        width:90%;
+        max-width:1150px;
+        margin:40px auto;
+        background:#111827;
+        padding:50px;
+        border-radius:18px;
+        box-shadow:0 0 25px rgba(0,0,0,0.45);
+    }
+
+    h1{
+        font-size:2.4rem;
+        margin-bottom:30px;
+        color:#60a5fa;
+        line-height:1.4;
+        text-align:center;
+    }
+
+    h2{
+        color:#93c5fd;
+        margin-top:45px;
+        margin-bottom:20px;
+        font-size:1.7rem;
+    }
+
+    p{
+        font-size:1.08rem;
+        line-height:1.9;
+        color:#d1d5db;
+        margin-bottom:22px;
+    }
+
+    ul{
+        color:#d1d5db;
+        line-height:1.9;
+        font-size:1.05rem;
+        padding-left:25px;
+    }
+
+    li{
+        margin-bottom:12px;
+    }
+
+    .highlight{
+        color:#93c5fd;
+        font-weight:bold;
+    }
+
+    .section{
+        margin-top:45px;
+        padding-top:15px;
+        border-top:1px solid rgba(255,255,255,0.08);
+    }
+
+    .button{
+        display:inline-block;
+        margin:12px 10px 0 0;
+        padding:14px 26px;
+        background:#2563eb;
+        color:white;
+        text-decoration:none;
+        border-radius:10px;
+        font-size:1rem;
+        transition:0.3s;
+    }
+
+    .button:hover{
+        background:#1d4ed8;
+        transform:translateY(-2px);
+    }
+
+    .button-green{
+        background:#16a34a;
+    }
+
+    .button-green:hover{
+        background:#15803d;
+    }
+
+    .important{
+        background:#1e293b;
+        border-left:5px solid #60a5fa;
+        padding:25px;
+        border-radius:12px;
+        margin-top:30px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Lezione 36. Come Creare un Nuovo Articolo nell'App Mobile</h1>
+
+    <p>
+        In questa lezione imparerai come creare nuovi 
+        <span class="highlight">articoli di inventario e prodotti direttamente dall'applicazione mobile Android</span>.
+    </p>
+
+    <p>
+        La possibilità di creare articoli da un dispositivo mobile è estremamente importante per le moderne operazioni aziendali perché le informazioni dell'inventario possono essere registrate immediatamente da magazzini, negozi, visite ai fornitori, operazioni sul campo, punti di consegna o attività di acquisto senza dover attendere il ritorno in ufficio.
+    </p>
+
+    <p>
+        La creazione mobile degli articoli trasforma l'applicazione Android in un vero strumento operativo di inventario capace di espandere e aggiornare il database aziendale in tempo reale.
+    </p>
+
+    <div class="important">
+
+        <p>
+            Una delle funzionalità più potenti del sistema mobile è che 
+            <span class="highlight">una fotografia può essere scattata direttamente dalla fotocamera del dispositivo Android durante la creazione dell'articolo</span>.
+        </p>
+
+        <p>
+            L'immagine viene automaticamente salvata insieme all'articolo nel database, consentendo ai prodotti di mantenere un'identificazione visiva in tutto il sistema.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Perché Creare Articoli da Dispositivi Mobili È Importante</h2>
+
+        <p>
+            In molte aziende, nuovi prodotti compaiono continuamente durante le operazioni quotidiane.
+        </p>
+
+        <p>
+            I fornitori possono introdurre nuovo inventario, i negozi possono ricevere prodotti inattesi, i team sul campo possono scoprire nuovi materiali oppure le aziende possono espandere costantemente il proprio catalogo prodotti.
+        </p>
+
+        <p>
+            Senza la creazione mobile degli articoli, i dipendenti dovrebbero annotare manualmente le informazioni e successivamente ricreare i prodotti dal computer dell'ufficio, perdendo tempo e aumentando il rischio di errori.
+        </p>
+
+        <p>
+            La creazione mobile elimina i ritardi e consente l'espansione dell'inventario immediatamente mentre le operazioni sono in corso.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Informazioni Che Possono Essere Registrate per Ogni Articolo</h2>
+
+        <p>
+            Durante il processo di creazione, l'applicazione mobile può memorizzare una grande quantità di informazioni operative relative a ciascun articolo di inventario.
+        </p>
+
+        <ul>
+            <li>Nome del prodotto.</li>
+            <li>Codice interno dell'articolo.</li>
+            <li>Informazioni sul codice a barre.</li>
+            <li>Categorie e classificazioni.</li>
+            <li>Gruppi di inventario.</li>
+            <li>Prezzi di acquisto.</li>
+            <li>Prezzi di vendita.</li>
+            <li>Informazioni sui costi.</li>
+            <li>Configurazioni fiscali.</li>
+            <li>Descrizioni e note.</li>
+            <li>Impostazioni relative alle scorte.</li>
+            <li>Unità di misura.</li>
+            <li>Riferimenti ai fornitori.</li>
+            <li>Fotografie acquisite direttamente dalla fotocamera.</li>
+            <li>Commenti e osservazioni operative.</li>
+        </ul>
+
+        <p>
+            Questo consente alle aziende di creare registri di inventario completi e organizzati direttamente dai dispositivi Android.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>L'Importanza delle Fotografie dei Prodotti</h2>
+
+        <p>
+            Le immagini dei prodotti sono estremamente preziose per la gestione dell'inventario perché creano un'identificazione visiva per ogni articolo all'interno del sistema.
+        </p>
+
+        <p>
+            Invece di affidarsi soltanto a descrizioni testuali o codici, i dipendenti possono riconoscere immediatamente i prodotti in modo visivo.
+        </p>
+
+        <p>
+            Questo diventa particolarmente utile quando le aziende gestiscono centinaia o migliaia di articoli di inventario.
+        </p>
+
+        <p>
+            Le fotografie migliorano la velocità operativa, riducono la confusione tra prodotti simili e semplificano la formazione dei nuovi dipendenti.
+        </p>
+
+        <p>
+            Le immagini migliorano inoltre le operazioni mobili perché i dipendenti sul campo possono confermare visivamente i prodotti prima di registrare acquisti, vendite, movimenti di magazzino o consegne.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Applicazioni delle Immagini dei Prodotti All'Interno del Sistema</h2>
+
+        <ul>
+            <li>Identificazione visiva dell'inventario.</li>
+            <li>Riduzione degli errori nella selezione dei prodotti.</li>
+            <li>Supporto alle operazioni di magazzino.</li>
+            <li>Miglioramento dei flussi di vendita mobile.</li>
+            <li>Supporto ai processi di conteggio dell'inventario.</li>
+            <li>Miglioramento dell'accuratezza negli acquisti.</li>
+            <li>Facilitazione della comunicazione con i fornitori.</li>
+            <li>Creazione di cataloghi visivi.</li>
+            <li>Supporto alla verifica dei prodotti.</li>
+            <li>Miglioramento delle presentazioni ai clienti.</li>
+            <li>Riduzione della complessità della formazione.</li>
+            <li>Supporto alle operazioni sul campo.</li>
+            <li>Miglioramento dei processi di conferma delle consegne.</li>
+            <li>Documentazione delle condizioni dei prodotti.</li>
+            <li>Monitoraggio visivo di imballaggi ed etichettature.</li>
+        </ul>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Scenari Aziendali Reali per la Creazione Mobile di Articoli</h2>
+
+        <p>
+            La creazione mobile di articoli è utile in molti settori e ambienti operativi.
+        </p>
+
+        <p>
+            Alcuni esempi reali includono:
+        </p>
+
+        <ul>
+            <li>Dipendenti di magazzino che registrano nuovi arrivi di inventario.</li>
+            <li>Personale dei negozi che crea prodotti ricevuti dai fornitori.</li>
+            <li>Rappresentanti di vendita che aggiungono prodotti durante le visite ai clienti.</li>
+            <li>Ristoranti che registrano nuovi ingredienti o elementi del menu.</li>
+            <li>Aziende edili che registrano materiali dai cantieri.</li>
+            <li>Aziende di distribuzione che espandono i cataloghi di inventario.</li>
+            <li>Aziende di assistenza tecnica che registrano pezzi di ricambio.</li>
+            <li>Aziende retail che aggiornano dinamicamente l'inventario.</li>
+            <li>Aziende di importazione che aggiungono prodotti appena ricevuti.</li>
+            <li>Venditori mobili che creano prodotti direttamente durante le operazioni.</li>
+        </ul>
+
+        <p>
+            La possibilità di creare prodotti immediatamente dai dispositivi Android migliora drasticamente la flessibilità operativa e riduce i colli di bottiglia amministrativi.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Accuratezza dell'Inventario e Qualità dei Dati</h2>
+
+        <p>
+            Dati accurati sull'inventario rappresentano una delle basi della gestione aziendale efficiente.
+        </p>
+
+        <p>
+            Quando i prodotti vengono creati immediatamente alla fonte operativa, le aziende riducono il rischio di:
+        </p>
+
+        <ul>
+            <li>Prodotti mancanti.</li>
+            <li>Creazione duplicata di articoli.</li>
+            <li>Registrazioni errate dell'inventario.</li>
+            <li>Perdita di informazioni operative.</li>
+            <li>Aggiornamenti ritardati delle scorte.</li>
+            <li>Descrizioni errate dei prodotti.</li>
+            <li>Incoerenze nei prezzi.</li>
+            <li>Errori nei codici a barre.</li>
+            <li>Errori di trascrizione manuale.</li>
+        </ul>
+
+        <p>
+            La registrazione mobile migliora la coerenza dell'inventario perché le informazioni vengono acquisite immediatamente mentre i prodotti sono fisicamente disponibili davanti all'utente.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Integrazione con Acquisti, Vendite e Operazioni di Inventario</h2>
+
+        <p>
+            Una volta creato un articolo all'interno dell'applicazione mobile, esso diventa parte dell'intero ecosistema aziendale.
+        </p>
+
+        <p>
+            L'articolo potrà successivamente partecipare a:
+        </p>
+
+        <ul>
+            <li>Transazioni di acquisto.</li>
+            <li>Fatture di vendita.</li>
+            <li>Movimenti di inventario.</li>
+            <li>Calcoli delle scorte.</li>
+            <li>Gestione dei listini prezzi.</li>
+            <li>Operazioni con fornitori.</li>
+            <li>Vendite ai clienti.</li>
+            <li>Analisi della redditività.</li>
+            <li>Operazioni di magazzino.</li>
+            <li>Conteggio mobile dell'inventario.</li>
+            <li>Report aziendali.</li>
+            <li>Operazioni con codici a barre.</li>
+            <li>Analisi dell'inventario.</li>
+            <li>Flussi di vendita itinerante.</li>
+        </ul>
+
+        <p>
+            Poiché le immagini degli articoli vengono memorizzate insieme alle informazioni operative, il sistema crea un database di inventario più ricco e intelligente.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>L'Importanza di Android per le Operazioni Mobili di Inventario</h2>
+
+        <p>
+            I dispositivi Android sono estremamente importanti per la mobilità aziendale perché sono accessibili, flessibili, ampiamente disponibili e utilizzati globalmente da aziende di tutte le dimensioni.
+        </p>
+
+        <p>
+            Molte aziende scelgono Android perché consente implementazioni economiche in magazzini, negozi, team di vendita itinerante, operazioni sul campo e ambienti di gestione dell'inventario.
+        </p>
+
+        <p>
+            Smartphone e tablet Android includono inoltre tecnologie integrate estremamente preziose per il software aziendale:
+        </p>
+
+        <ul>
+            <li>Fotocamere integrate.</li>
+            <li>Sistemi GPS.</li>
+            <li>Interfacce touch.</li>
+            <li>Connettività portatile.</li>
+            <li>Capacità di scansione codici a barre.</li>
+            <li>Comunicazione wireless.</li>
+            <li>Notifiche mobili.</li>
+            <li>Flessibilità operativa offline.</li>
+        </ul>
+
+        <p>
+            Queste capacità trasformano i dispositivi Android in potenti terminali aziendali portatili.
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Obiettivi di Apprendimento di Questa Lezione</h2>
+
+        <p>
+            Alla fine di questa lezione comprenderai come creare articoli di inventario direttamente dall'applicazione mobile Android, come acquisire e memorizzare fotografie dei prodotti e come la creazione mobile dell'inventario migliori la velocità operativa, l'accuratezza dell'inventario e la flessibilità aziendale.
+        </p>
+
+        <p>
+            Il corso Udemy include una dimostrazione pratica completa che mostra passo dopo passo l'intero processo di creazione mobile degli articoli utilizzando scenari aziendali reali.
+        </p>
+
+    </div>
+
+    <div class="section">
+        <h2>Risorse e Navigazione</h2>
+
+        <p>
+            Accedi a tutti i download del software, materiali del corso, screenshot e risorse visive qui sotto.
+            Tutto fa parte di un 
+            <span class="highlight">ecosistema gratuito</span> 
+            con supporto gratuito e miglioramento continuo guidato dal feedback di utenti e aziende reali.
+        </p>
+
+        <a class="button" href="https://www.dropbox.com/scl/fi/w857cfimlerq19gtxyxo9/Stocks.rar?rlkey=kn06ugzajdyi4suja1hboe92u&st=96866jmr&dl=1">
+            Scarica il Software
+        </a>
+
+        <a class="button" href="Contenido.html">
+            Curriculum Completo
+        </a>
+
+        <a class="button" href="desktop.html">
+            Immagini Desktop
+        </a>
+
+        <a class="button" href="app.html">
+            Immagini App Mobile
+        </a>
+
+        <a class="button" href="https://www.udemy.com/course/free-tool-for-small-businesses-sales-purchases-and-stock/">
+            Corso (Inglese)
+        </a>
+
+        <a class="button" href="https://www.udemy.com/course/outil-gratuit-pour-entreprises-ventes-achats-et-stocks/">
+            Corso (Francese)
+        </a>
+
+        <a class="button" href="https://www.udemy.com/course/strumento-gratuito-per-imprese-acquisti-vendite-magazzino/">
+            Corso (Italiano)
+        </a>
+
+        <a class="button" href="https://www.udemy.com/course/ferramenta-gratuita-para-empresas-compras-vendas-estoque/">
+            Corso (Portoghese)
+        </a>
+
+        <a class="button button-green" href="index.html">
+            Vai alla Pagina Principale
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
