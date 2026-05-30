@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lezione 33. Come creare percorsi di vendita da utilizzare nell'app mobile</title>
+
+<style>
+    body{
+        margin:0;
+        padding:0;
+        font-family:Arial, sans-serif;
+        background:#0f172a;
+        color:white;
+        min-height:100vh;
+    }
+
+    .container{
+        width:90%;
+        max-width:1150px;
+        margin:40px auto;
+        background:#111827;
+        padding:50px;
+        border-radius:18px;
+        box-shadow:0 0 25px rgba(0,0,0,0.45);
+    }
+
+    h1{
+        font-size:2.4rem;
+        margin-bottom:30px;
+        color:#60a5fa;
+        line-height:1.4;
+        text-align:center;
+    }
+
+    h2{
+        margin-top:45px;
+        margin-bottom:20px;
+        color:#93c5fd;
+        font-size:1.6rem;
+    }
+
+    p{
+        font-size:1.1rem;
+        line-height:1.9;
+        color:#d1d5db;
+        margin-bottom:22px;
+    }
+
+    ul{
+        margin-top:10px;
+        margin-bottom:25px;
+        padding-left:25px;
+    }
+
+    li{
+        font-size:1.05rem;
+        line-height:1.8;
+        color:#d1d5db;
+        margin-bottom:12px;
+    }
+
+    .highlight{
+        color:#93c5fd;
+        font-weight:bold;
+    }
+
+    .section{
+        margin-top:45px;
+        padding-top:10px;
+    }
+
+    .button{
+        display:inline-block;
+        margin:10px;
+        padding:14px 28px;
+        background:#2563eb;
+        color:white;
+        text-decoration:none;
+        border-radius:10px;
+        font-size:1rem;
+        transition:0.3s;
+    }
+
+    .button:hover{
+        background:#1d4ed8;
+        transform:translateY(-2px);
+    }
+
+    .button-green{
+        background:#059669;
+    }
+
+    .button-green:hover{
+        background:#047857;
+    }
+
+    .info-box{
+        background:#1e293b;
+        border-left:5px solid #60a5fa;
+        padding:25px;
+        border-radius:12px;
+        margin-top:30px;
+        margin-bottom:30px;
+    }
+
+    .success-box{
+        background:#052e16;
+        border-left:5px solid #22c55e;
+        padding:25px;
+        border-radius:12px;
+        margin-top:30px;
+        margin-bottom:30px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Lezione 33. Come creare percorsi di vendita da utilizzare nell'app mobile</h1>
+
+    <p>
+        In questa lezione imparerai come creare e gestire 
+        <span class="highlight">Percorsi di vendita</span> 
+        da utilizzare all'interno dell'applicazione mobile Android.
+    </p>
+
+    <p>
+        I percorsi di vendita sono uno degli strumenti operativi più potenti nei sistemi aziendali moderni perché permettono di organizzare i clienti geograficamente, ottimizzare le operazioni sul campo, migliorare l'efficienza delle consegne, coordinare i team di vendita mobili, ridurre i costi di trasporto e aumentare la produttività complessiva.
+    </p>
+
+    <p>
+        Questa funzionalità trasforma l'app mobile da semplice strumento di vendita a una piattaforma completa per le operazioni sul campo e la gestione logistica.
+    </p>
+
+    <div class="info-box">
+
+        <p>
+            Un percorso di vendita è essenzialmente un itinerario geografico strutturato o una zona operativa assegnata a clienti, fornitori, venditori, personale di consegna o rappresentanti sul campo.
+        </p>
+
+        <p>
+            Organizzando i clienti geograficamente, le aziende possono migliorare drasticamente l'efficienza, ridurre i tempi di viaggio, aumentare le visite giornaliere e prendere decisioni operative più intelligenti.
+        </p>
+
+    </div>
+
+    <h2>Perché i percorsi di vendita sono estremamente importanti</h2>
+
+    <p>
+        In molte aziende, specialmente quelle che operano con prodotti fisici, distribuzione, inventario, vendite mobili o servizi sul campo, l'efficienza dei trasporti e delle visite ai clienti influisce direttamente sulla redditività.
+    </p>
+
+    <p>Without organized routes, employees may:</p>
+
+    <ul>
+        <li>Sprecare carburante e risorse di trasporto</li>
+        <li>Visitare i clienti in modo inefficiente</li>
+        <li>Perdere tempo nei trasferimenti</li>
+        <li>Effettuare visite duplicate inutili</li>
+        <li>Ridurre la produttività giornaliera</li>
+        <li>Perdere appuntamenti programmati</li>
+        <li>Generare copertura di servizio incoerente</li>
+        <li>Creare pattern di consegna disorganizzati</li>
+    </ul>
+
+    <p>
+        Una corretta organizzazione dei percorsi aiuta le aziende a operare in modo più professionale, scalabile e basato sui dati.
+    </p>
+
+    <h2>Intelligenza geografica dei clienti</h2>
+
+    <p>
+        Uno degli aspetti più forti di questo sistema è che clienti e fornitori sono memorizzati con coordinate geografiche direttamente nel database.
+    </p>
+
+    <p>
+        Questo significa che il software non memorizza solo nomi e numeri di telefono, ma costruisce una vera rete geografica aziendale.
+    </p>
+
+    <p>
+        Grazie a questo è possibile:
+    </p>
+
+    <ul>
+        <li>Pianificazione dei percorsi di vendita geografici</li>
+        <li>Segmentazione regionale dei clienti</li>
+        <li>Analisi delle zone di consegna</li>
+        <li>Ottimizzazione dei viaggi</li>
+        <li>Coordinamento vendite sul campo</li>
+        <li>Assegnazione percorsi ai dipendenti</li>
+        <li>Report basati su aree geografiche</li>
+        <li>Pianificazione inventario regionale</li>
+        <li>Analisi densità clienti</li>
+        <li>Individuazione opportunità di espansione</li>
+    </ul>
+
+    <h2>Applicazioni aziendali reali</h2>
+
+    <p>
+        I percorsi di vendita hanno numerose applicazioni pratiche in molti settori.
+    </p>
+
+    <p>Esempi:</p>
+
+    <ul>
+        <li>Aziende di distribuzione alimentare</li>
+        <li>Consegna prodotti al dettaglio</li>
+        <li>Team di vendita all'ingrosso</li>
+        <li>Distribuzione farmaceutica</li>
+        <li>Aziende di supporto tecnico sul campo</li>
+        <li>Servizi di manutenzione</li>
+        <li>Distributori di acqua e bevande</li>
+        <li>Rappresentanti di vendita</li>
+        <li>Operazioni assicurative sul campo</li>
+        <li>Team di inventario mobile</li>
+        <li>Riscossione e pagamenti</li>
+        <li>Pianificazione visite clienti</li>
+    </ul>
+
+    <p>
+        In molte aziende, la sola organizzazione dei percorsi può migliorare significativamente l'efficienza operativa.
+    </p>
+
+    <h2>Integrazione con l'app mobile</h2>
+
+    <p>
+        L'applicazione Android utilizza questi percorsi per organizzare le operazioni sul campo.
+    </p>
+
+    <p>
+        Gli utenti possono accedere ai clienti in base al loro territorio assegnato.
+    </p>
+
+    <p>Questo consente ai team di vendita di:</p>
+
+    <ul>
+        <li>Identificare rapidamente i clienti vicini</li>
+        <li>Seguire percorsi organizzati</li>
+        <li>Ridurre i viaggi inutili</li>
+        <li>Aumentare la copertura clienti</li>
+        <li>Migliorare la pianificazione delle consegne</li>
+        <li>Effettuare vendite mobili più efficienti</li>
+        <li>Accedere alle informazioni clienti sul posto</li>
+        <li>Coordinare operazioni dinamiche</li>
+    </ul>
+
+    <p>
+        Il risultato è un ambiente operativo più organizzato e scalabile.
+    </p>
+
+    <h2>Importanza dei dati geografici</h2>
+
+    <p>
+        Memorizzare le coordinate dei clienti crea valore strategico a lungo termine.
+    </p>
+
+    <p>
+        Può essere usato per:
+    </p>
+
+    <ul>
+        <li>Mappe di calore</li>
+        <li>Analisi concentrazione clienti</li>
+        <li>Ottimizzazione territori di vendita</li>
+        <li>Pianificazione espansione</li>
+        <li>Valutazione performance regionali</li>
+        <li>Calcolo efficienza consegne</li>
+        <li>Analisi logistica basata sulla distanza</li>
+        <li>Stima costi di viaggio</li>
+        <li>Identificazione lacune di copertura</li>
+        <li>Pianificazione nuove filiali</li>
+    </ul>
+
+    <div class="success-box">
+
+        <p>
+            Le aziende che organizzano correttamente i dati geografici ottengono un vantaggio competitivo significativo.
+        </p>
+
+        <p>
+            Anche piccoli miglioramenti nei percorsi possono generare grandi risparmi nel tempo.
+        </p>
+
+    </div>
+
+    <h2>Pianificazione e produttività</h2>
+
+    <p>
+        Uno dei principali obiettivi è massimizzare le attività giornaliere.
+    </p>
+
+    <p>Benefici:</p>
+
+    <ul>
+        <li>Aumento visite clienti</li>
+        <li>Riduzione tempi morti</li>
+        <li>Migliore pianificazione</li>
+        <li>Meno sovrapposizioni</li>
+        <li>Maggiore produttività</li>
+        <li>Riduzione costi</li>
+        <li>Servizio clienti più veloce</li>
+        <li>Territori organizzati</li>
+    </ul>
+
+    <h2>Scalabilità aziendale</h2>
+
+    <p>
+        Con la crescita, la gestione diventa più complessa.
+    </p>
+
+    <p>
+        I percorsi di vendita aiutano a mantenere l’ordine operativo.
+    </p>
+
+    <p>Supporta:</p>
+
+    <ul>
+        <li>Team multipli</li>
+        <li>Gestione territoriale</li>
+        <li>Coordinamento consegne</li>
+        <li>Operazioni distribuite</li>
+    </ul>
+
+    <h2>Filosofia offline-first</h2>
+
+    <p>
+        Il sistema non dipende dal cloud.
+    </p>
+
+    <p>
+        I dati sono gestiti localmente e sincronizzati quando necessario.
+    </p>
+
+    <p>Vantaggi:</p>
+
+    <ul>
+        <li>Maggiore controllo</li>
+        <li>Meno costi ricorrenti</li>
+        <li>Prestazioni locali migliori</li>
+        <li>Gestione indipendente</li>
+        <li>Flessibilità offline</li>
+    </ul>
+
+    <h2>Dimostrazione pratica</h2>
+
+    <p>
+        Nel corso imparerai come creare e gestire i percorsi in modo pratico.
+    </p>
+
+    <div class="section">
+
+        <h2>Risorse e navigazione</h2>
+
+        <p>
+            Scarica materiali, immagini e risorse dell’app qui sotto.
+        </p>
+
+        <a class="button" href="https://www.dropbox.com/scl/fi/w857cfimlerq19gtxyxo9/Stocks.rar?rlkey=kn06ugzajdyi4suja1hboe92u&st=96866jmr&dl=1">
+            Scarica Software
+        </a>
+
+        <a class="button" href="Contenido.html">
+            Curriculum completo
+        </a>
+
+        <a class="button" href="desktop.html">
+            Immagini Desktop
+        </a>
+
+        <a class="button" href="app.html">
+            Immagini Mobile
+        </a>
+
+        <a class="button" href="https://www.udemy.com/course/free-tool-for-small-businesses-sales-purchases-and-stock/">
+            Corso (Inglese)
+        </a>
+
+        <a class="button" href="https://www.udemy.com/course/outil-gratuit-pour-entreprises-ventes-achats-et-stocks/">
+            Corso (Francese)
+        </a>
+
+        <a class="button" href="https://www.udemy.com/course/strumento-gratuito-per-imprese-acquisti-vendite-magazzino/">
+            Corso (Italiano)
+        </a>
+
+        <a class="button" href="https://www.udemy.com/course/ferramenta-gratuita-para-empresas-compras-vendas-estoque/">
+            Corso (Portoghese)
+        </a>
+
+        <a class="button button-green" href="index.html">
+            Torna alla pagina principale
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
