@@ -1,585 +1,207 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJ43JP9F');</script>
+<!-- End Google Tag Manager -->
+
+<title>Scoprire le Tue Abitudini di Spesa: Come le Piccole Abitudini si Sommano</title>
+
+<meta name="description" content="Impara a identificare i tuoi modelli di spesa, comprendere come le piccole abitudini influenzano il tuo budget e migliorare la gestione delle tue finanze personali.">
+
+<meta name="keywords" content="abitudini di spesa, finanze personali, budgeting, monitoraggio delle spese, consapevolezza finanziaria, abitudini economiche">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lezione 10. Creare Listini Prezzi | Strategie di Prezzo, Segmentazione Clienti e Gestione Commerciale</title>
-
-<meta name="description" content="Scopri come creare e gestire listini prezzi professionali all’interno del sistema ERP. Approfondisci strategie di prezzo, segmentazione dei clienti, prezzi all’ingrosso, prezzi regionali, prezzi per distributori, prezzi promozionali, controllo della redditività e applicazioni commerciali avanzate.">
-
-<meta name="keywords" content="listini prezzi ERP, sistema prezzi inventario, prezzi clienti, listini all’ingrosso, prezzi distributori, strategie di prezzo ERP, prezzi vendite inventario, livelli multipli di prezzo, gestione prezzi aziendali, automazione prezzi di vendita">
-
 <style>
-
-    body{
-        margin:0;
-        padding:0;
-        font-family:Arial, sans-serif;
-        background:#0f172a;
-        color:white;
-        line-height:1.8;
-    }
-
-    .container{
-        width:90%;
-        max-width:1180px;
-        margin:40px auto;
-        background:#111827;
-        padding:50px;
-        border-radius:18px;
-        box-shadow:0 0 25px rgba(0,0,0,0.4);
-    }
-
-    h1{
-        font-size:2.4rem;
-        margin-bottom:30px;
-        color:#60a5fa;
-        line-height:1.4;
-        text-align:center;
-    }
-
-    h2{
-        color:#93c5fd;
-        margin-top:45px;
-        margin-bottom:20px;
-        font-size:1.6rem;
-    }
-
-    p{
-        font-size:1.08rem;
-        line-height:1.95;
-        color:#d1d5db;
-        margin-bottom:22px;
-    }
-
-    ul{
-        color:#d1d5db;
-        padding-left:25px;
-    }
-
-    li{
-        margin-bottom:14px;
-    }
-
-    .highlight{
-        color:#93c5fd;
-        font-weight:bold;
-    }
-
-    .intro-box{
-        background:#1e293b;
-        border-left:5px solid #60a5fa;
-        padding:25px;
-        border-radius:12px;
-        margin-bottom:35px;
-    }
-
-    .section{
-        margin-top:50px;
-        padding-top:25px;
-        border-top:1px solid rgba(255,255,255,0.08);
-    }
-
-    .button{
-        display:inline-block;
-        margin:10px;
-        padding:14px 26px;
-        background:#2563eb;
-        color:white;
-        text-decoration:none;
-        border-radius:10px;
-        font-size:1rem;
-        transition:0.3s;
-    }
-
-    .button:hover{
-        background:#1d4ed8;
-        transform:translateY(-2px);
-    }
-
-    .button-green{
-        background:#059669;
-    }
-
-    .button-green:hover{
-        background:#047857;
-    }
-
+body {
+    font-family: Arial, sans-serif;
+    max-width: 950px;
+    margin: auto;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: #f4f6f9;
+}
+h1, h2 {
+    color: #1e2a38;
+}
+.section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.button {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.button:hover {
+    background-color: #005bb5;
+}
 </style>
+
 </head>
 
 <body>
 
-<div class="container">
-
-    <h1>
-        Lezione 10. Creare Listini Prezzi
-    </h1>
-
-    <div class="intro-box">
-
-        <p>
-            In questa lezione imparerai come creare e gestire 
-            <span class="highlight">Listini Prezzi</span> 
-            all’interno del sistema ERP e di gestione dell’inventario.
-        </p>
-
-        <p>
-            I listini prezzi sono uno degli strumenti commerciali più potenti nei moderni software aziendali perché consentono alle aziende di organizzare strategie di prezzo professionali tra clienti, prodotti, canali di vendita, regioni geografiche, distributori e scenari commerciali.
-        </p>
-
-        <p>
-            Un sistema di prezzi ben progettato aiuta le aziende ad aumentare la coerenza operativa, migliorare il controllo della redditività, semplificare i flussi di vendita, ridurre gli errori umani nei prezzi e creare strategie commerciali più avanzate.
-        </p>
-
-    </div>
-
-    <h2>
-        Perché i Listini Prezzi Sono Estremamente Importanti
-    </h2>
-
-    <p>
-        Il pricing è una delle aree più sensibili e strategiche di qualsiasi azienda.
-    </p>
-
-    <p>
-        Anche piccole incoerenze nei prezzi possono influire direttamente su:
-    </p>
-
-    <ul>
-        <li>Margini di profitto</li>
-        <li>Prestazioni di vendita</li>
-        <li>Soddisfazione dei clienti</li>
-        <li>Competitività di mercato</li>
-        <li>Rotazione dell’inventario</li>
-        <li>Crescita aziendale</li>
-        <li>Stabilità finanziaria</li>
-    </ul>
-
-    <p>
-        Senza listini organizzati, molte aziende finiscono per affidarsi a calcoli manuali, memoria, fogli di calcolo o decisioni di prezzo incoerenti che generano confusione operativa e problemi di redditività.
-    </p>
-
-    <p>
-        La gestione professionale dei listini risolve questi problemi centralizzando le regole di prezzo all’interno del sistema ERP.
-    </p>
-
-    <h2>
-        Cos’è un Listino Prezzi?
-    </h2>
-
-    <p>
-        Un listino prezzi è una configurazione strutturata dei prezzi che definisce quanto costano prodotti o servizi in specifiche condizioni aziendali.
-    </p>
-
-    <p>
-        Invece di mantenere un unico prezzo fisso per tutti i clienti, le aziende possono creare più strutture di prezzo adattate a differenti realtà operative.
-    </p>
-
-    <p>
-        Ad esempio, lo stesso prodotto può avere:
-    </p>
-
-    <ul>
-        <li>Prezzo al dettaglio</li>
-        <li>Prezzo all’ingrosso</li>
-        <li>Prezzo per distributori</li>
-        <li>Prezzo per clienti VIP</li>
-        <li>Prezzo export</li>
-        <li>Prezzo promozionale</li>
-        <li>Prezzo regionale</li>
-        <li>Prezzo per vendite online</li>
-        <li>Prezzo per clienti aziendali</li>
-    </ul>
-
-    <p>
-        I listini consentono a tutti questi scenari di coesistere all’interno di un unico sistema organizzato.
-    </p>
-
-    <h2>
-        Applicazioni per la Segmentazione dei Clienti
-    </h2>
-
-    <p>
-        Uno degli utilizzi più importanti dei listini prezzi è la segmentazione dei clienti.
-    </p>
-
-    <p>
-        Diversi gruppi di clienti richiedono spesso condizioni commerciali differenti.
-    </p>
-
-    <p>
-        Ad esempio:
-    </p>
-
-    <ul>
-        <li>I clienti retail possono pagare prezzi standard</li>
-        <li>I clienti all’ingrosso possono ricevere sconti sui volumi</li>
-        <li>I distributori possono ricevere tariffe commerciali speciali</li>
-        <li>I clienti fedeli possono ricevere prezzi preferenziali</li>
-        <li>Gli account aziendali possono negoziare contratti personalizzati</li>
-    </ul>
-
-    <p>
-        I listini permettono alle aziende di automatizzare queste relazioni commerciali invece di calcolare i prezzi manualmente ogni volta.
-    </p>
-
-    <h2>
-        Prezzi all’Ingrosso e per Distributori
-    </h2>
-
-    <p>
-        Le operazioni all’ingrosso richiedono generalmente sistemi di prezzo flessibili.
-    </p>
-
-    <p>
-        Le aziende che vendono a distributori o rivenditori necessitano frequentemente di strutture di prezzo più basse poiché questi clienti acquistano volumi maggiori.
-    </p>
-
-    <p>
-        Il sistema ERP può mantenere listini separati per:
-    </p>
-
-    <ul>
-        <li>Vendite al dettaglio</li>
-        <li>Distribuzione all’ingrosso</li>
-        <li>Operazioni ad alto volume</li>
-        <li>Partner commerciali strategici</li>
-        <li>Rivenditori regionali</li>
-    </ul>
-
-    <p>
-        Questo aiuta a mantenere strutture commerciali organizzate preservando il controllo della redditività.
-    </p>
-
-    <h2>
-        Prezzi Geografici e Regionali
-    </h2>
-
-    <p>
-        I listini possono anche essere utilizzati per strategie di prezzo geografiche.
-    </p>
-
-    <p>
-        Le aziende che operano in più città, paesi o regioni affrontano spesso differenti:
-    </p>
-
-    <ul>
-        <li>Costi di trasporto</li>
-        <li>Costi di importazione</li>
-        <li>Tasse</li>
-        <li>Condizioni di mercato</li>
-        <li>Fluttuazioni valutarie</li>
-        <li>Contesti competitivi</li>
-    </ul>
-
-    <p>
-        I listini regionali consentono alle aziende di adattare i prezzi alle realtà operative locali mantenendo il controllo centralizzato all’interno dell’ERP.
-    </p>
-
-    <h2>
-        Prezzi Promozionali e Temporanei
-    </h2>
-
-    <p>
-        I listini prezzi sono estremamente utili anche per campagne promozionali.
-    </p>
-
-    <p>
-        Le aziende possono creare strutture di prezzo temporanee per:
-    </p>
-
-    <ul>
-        <li>Vendite stagionali</li>
-        <li>Promozioni festive</li>
-        <li>Liquidazione dell’inventario</li>
-        <li>Eventi speciali</li>
-        <li>Campagne marketing</li>
-        <li>Lanci di prodotti</li>
-        <li>Vendite di fine serie</li>
-    </ul>
-
-    <p>
-        Invece di modificare manualmente i prezzi prodotto per prodotto, intere strutture promozionali possono essere attivate in modo efficiente.
-    </p>
-
-    <h2>
-        Controllo della Redditività
-    </h2>
-
-    <p>
-        Una corretta gestione dei listini è essenziale per l’analisi della redditività.
-    </p>
-
-    <p>
-        Il sistema ERP può aiutare le aziende a confrontare:
-    </p>
-
-    <ul>
-        <li>Costi dei prodotti</li>
-        <li>Prezzi di vendita</li>
-        <li>Margini di profitto</li>
-        <li>Strutture di sconto</li>
-        <li>Prestazioni commerciali</li>
-    </ul>
-
-    <p>
-        Questo consente alle aziende di identificare:
-    </p>
-
-    <ul>
-        <li>Prodotti con margini bassi</li>
-        <li>Sconti troppo aggressivi</li>
-        <li>Strategie commerciali non redditizie</li>
-        <li>Incoerenze nei prezzi</li>
-        <li>Opportunità di ottimizzazione</li>
-    </ul>
-
-    <p>
-        L’intelligenza di pricing diventa molto più affidabile quando è integrata direttamente con informazioni di inventario e acquisti.
-    </p>
-
-    <h2>
-        Relazione tra Acquisti e Listini Prezzi
-    </h2>
-
-    <p>
-        I listini prezzi sono strettamente collegati alle operazioni di acquisto.
-    </p>
-
-    <p>
-        Quando i costi dei prodotti aumentano a causa di variazioni dei prezzi dei fornitori, le aziende potrebbero dover aggiornare di conseguenza i prezzi di vendita.
-    </p>
-
-    <p>
-        Il sistema ERP consente alle aziende di:
-    </p>
-
-    <ul>
-        <li>Analizzare l’evoluzione dei costi di acquisto</li>
-        <li>Confrontare le tendenze dei prezzi dei fornitori</li>
-        <li>Adeguare dinamicamente i margini</li>
-        <li>Proteggere la redditività durante l’inflazione</li>
-        <li>Reagire rapidamente agli aumenti di costo</li>
-    </ul>
-
-    <p>
-        Questa integrazione tra acquisti e prezzi di vendita crea un ecosistema commerciale più intelligente.
-    </p>
-
-    <h2>
-        Riduzione degli Errori Umani
-    </h2>
-
-    <p>
-        La determinazione manuale dei prezzi è una delle principali fonti di errori operativi in molte aziende.
-    </p>
-
-    <p>
-        I dipendenti possono accidentalmente:
-    </p>
-
-    <ul>
-        <li>Utilizzare prezzi obsoleti</li>
-        <li>Applicare sconti errati</li>
-        <li>Dimenticare tariffe negoziate</li>
-        <li>Usare il prezzo sbagliato per il cliente</li>
-        <li>Calcolare erroneamente i margini</li>
-    </ul>
-
-    <p>
-        I listini automatizzati riducono notevolmente questi rischi consentendo all’ERP di applicare automaticamente le regole di prezzo.
-    </p>
-
-    <h2>
-        Ottimizzazione dei Flussi di Vendita
-    </h2>
-
-    <p>
-        I listini organizzati migliorano significativamente anche la velocità delle vendite.
-    </p>
-
-    <p>
-        Gli operatori commerciali possono generare preventivi, fatture e transazioni più rapidamente perché le informazioni sui prezzi sono già strutturate e centralizzate nell’ERP.
-    </p>
-
-    <p>
-        Questo migliora:
-    </p>
-
-    <ul>
-        <li>Efficienza delle vendite</li>
-        <li>Velocità del servizio clienti</li>
-        <li>Coerenza operativa</li>
-        <li>Professionalità commerciale</li>
-        <li>Flussi di generazione preventivi</li>
-    </ul>
-
-    <p>
-        Flussi di pricing più rapidi diventano particolarmente importanti per aziende che gestiscono grandi inventari o molte transazioni giornaliere.
-    </p>
-
-    <h2>
-        Esempi Aziendali Reali
-    </h2>
-
-    <p>
-        Diversi settori utilizzano i listini prezzi in molti modi differenti.
-    </p>
-
-    <p>
-        Alcuni esempi includono:
-    </p>
-
-    <ul>
-        <li>Un ferramenta che utilizza prezzi per appaltatori</li>
-        <li>Una farmacia che utilizza prezzi legati alle assicurazioni</li>
-        <li>Un grossista che utilizza livelli di prezzo per distributori</li>
-        <li>Un fornitore per ristoranti che utilizza sconti sui volumi</li>
-        <li>Un negozio di elettronica che utilizza prezzi online rispetto a quelli in negozio</li>
-        <li>Un esportatore che utilizza strutture di prezzo internazionali</li>
-        <li>Un produttore che utilizza commissioni per rivenditori</li>
-    </ul>
-
-    <p>
-        I listini forniscono la flessibilità necessaria per questi ambienti commerciali complessi.
-    </p>
-
-    <h2>
-        Intelligence Commerciale a Lungo Termine
-    </h2>
-
-    <p>
-        Nel tempo, le informazioni dei listini diventano preziosi dati di business intelligence.
-    </p>
-
-    <p>
-        Le aziende possono analizzare:
-    </p>
-
-    <ul>
-        <li>Quali strutture di prezzo generano più vendite</li>
-        <li>Quali gruppi di clienti sono più redditizi</li>
-        <li>Come il pricing influenza la rotazione dell’inventario</li>
-        <li>Quali sconti sono sostenibili</li>
-        <li>Come le condizioni di mercato influenzano i prezzi</li>
-    </ul>
-
-    <p>
-        Queste informazioni aiutano le aziende a migliorare nel tempo le decisioni commerciali strategiche.
-    </p>
-
-    <h2>
-        Vantaggi dell’Integrazione ERP
-    </h2>
-
-    <p>
-        All’interno dell’ecosistema ERP, i listini si integrano con:
-    </p>
-
-    <ul>
-        <li>Moduli di inventario</li>
-        <li>Sistemi di acquisto</li>
-        <li>Fatture di vendita</li>
-        <li>Database clienti</li>
-        <li>Informazioni sui costi dei fornitori</li>
-        <li>Report finanziari</li>
-        <li>Sistemi di preventivazione</li>
-        <li>Sincronizzazione mobile</li>
-    </ul>
-
-    <p>
-        Questa integrazione crea un’infrastruttura commerciale molto più professionale e scalabile.
-    </p>
-
-    <h2>
-        Cosa Imparerai in Questa Lezione
-    </h2>
-
-    <p>
-        All’interno del corso Udemy, questa lezione include una dimostrazione pratica completa che mostra:
-    </p>
-
-    <ul>
-        <li>Come creare listini prezzi</li>
-        <li>Come assegnare prezzi ai prodotti</li>
-        <li>Come organizzare più livelli di prezzo</li>
-        <li>Come gestire strutture commerciali di pricing</li>
-        <li>Come semplificare le operazioni di vendita</li>
-        <li>Come il pricing si integra con i flussi di inventario</li>
-        <li>Come mantenere la coerenza dei prezzi</li>
-        <li>Come creare strategie commerciali scalabili</li>
-    </ul>
-
-    <p>
-        La lezione spiega l’intero flusso di pricing passo dopo passo utilizzando esempi pratici ERP reali e scenari commerciali aziendali.
-    </p>
-
-    <div class="section">
-
-        <h2>
-            Continua a Imparare
-        </h2>
-
-        <p>
-            Continua a esplorare la gestione dell’inventario, i flussi ERP, i sistemi commerciali di pricing, le operazioni di acquisto e gli strumenti di business intelligence qui sotto.
-        </p>
-
-        <a href="Contenido.html" class="button">
-            Torna al Programma del Corso
-        </a>
-
-    </div>
-
-    <div class="section">
-
-        <h2>
-            Risorse & Navigazione
-        </h2>
-
-        <p>
-            Accedi qui sotto a download software, screenshot ERP, risorse educative multilingue, anteprime dell’app mobile e materiali completi del corso.
-            Tutto appartiene a un ecosistema gratuito in continuo miglioramento con supporto gratuito e accessibilità a lungo termine.
-        </p>
-
-        <a class="button" href="https://www.dropbox.com/scl/fi/w857cfimlerq19gtxyxo9/Stocks.rar?rlkey=kn06ugzajdyi4suja1hboe92u&st=96866jmr&dl=1">
-            Scarica il Software
-        </a>
-
-        <a class="button" href="Contenido.html">
-            Programma Completo
-        </a>
-
-        <a class="button" href="desktop.html">
-            Immagini Desktop
-        </a>
-
-        <a class="button" href="app.html">
-            Immagini App Mobile
-        </a>
-
-        <a class="button" href="https://www.udemy.com/course/free-tool-for-small-businesses-sales-purchases-and-stock/">
-            Corso (Inglese)
-        </a>
-
-        <a class="button" href="https://www.udemy.com/course/outil-gratuit-pour-entreprises-ventes-achats-et-stocks/">
-            Corso (Francese)
-        </a>
-
-        <a class="button" href="https://www.udemy.com/course/strumento-gratuito-per-imprese-acquisti-vendite-magazzino/">
-            Corso (Italiano)
-        </a>
-
-        <a class="button" href="https://www.udemy.com/course/ferramenta-gratuita-para-empresas-compras-vendas-estoque/">
-            Corso (Portoghese)
-        </a>
-
-        <a class="button button-green" href="index.html">
-            Vai alla Pagina Principale
-        </a>
-
-    </div>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJ43JP9F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="section">
+
+<h1>Scoprire le Tue Abitudini di Spesa: Come le Piccole Abitudini si Sommano</h1>
+
+<p>
+Le tue abitudini di spesa quotidiane, anche quelle più piccole, plasmano la tua realtà finanziaria nel tempo. Scoprendo e analizzando i tuoi modelli di spesa, acquisisci consapevolezza di come le tue scelte influenzano il tuo budget e i tuoi obiettivi finanziari a lungo termine.
+</p>
+
+<p>
+Comprendere questi modelli ti consente di prendere decisioni intenzionali, ridurre le spese inutili e ottimizzare i tuoi risparmi.
+</p>
+
+<a class="button" href="https://www.dropbox.com/scl/fi/w857cfimlerq19gtxyxo9/Stocks.rar?rlkey=kn06ugzajdyi4suja1hboe92u&st=96866jmr&dl=1">
+Scarica il Software Gratuito
+</a>
+
+</div>
+
+<div class="section">
+
+<h2>Perché Riconoscere i Modelli di Spesa è Importante</h2>
+
+<ul>
+<li>Identifica piccole spese ricorrenti che si accumulano nel tempo</li>
+<li>Rivela abitudini di spesa impulsive o non necessarie</li>
+<li>Aiuta ad allineare le spese quotidiane agli obiettivi finanziari</li>
+<li>Supporta una pianificazione del budget più intelligente e accurata</li>
+<li>Aumenta la consapevolezza e il controllo finanziario complessivi</li>
+</ul>
+
+<p>
+Anche piccoli cambiamenti nelle abitudini quotidiane possono fare una differenza significativa per la tua salute finanziaria.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>Passaggi per Scoprire i Tuoi Modelli di Spesa</h2>
+
+<ul>
+<li>Registra ogni spesa, grande o piccola, in modo costante</li>
+<li>Utilizza categorie chiare per tutte le spese (ad esempio: alimentari, ristoranti, trasporti)</li>
+<li>Visualizza le spese tramite grafici o tabelle per individuare le tendenze</li>
+<li>Confronta le spese effettive con i budget pianificati</li>
+<li>Effettua revisioni settimanali o mensili per individuare le abitudini che influenzano i tuoi obiettivi finanziari</li>
+</ul>
+
+<p>
+Questi passaggi aiutano a trasformare semplici dati di transazione in informazioni significative sul tuo comportamento finanziario.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>Buone Pratiche per Identificare le Abitudini</h2>
+
+<ul>
+<li>Concentrati sulle spese ricorrenti che potrebbero passare inosservate</li>
+<li>Includi sia le transazioni bancarie sia i pagamenti in contanti per avere una visione completa</li>
+<li>Evidenzia gli acquisti occasionali o irregolari per comprenderne l'impatto</li>
+<li>Cerca schemi relativi a tempistiche, frequenza e categorie</li>
+<li>Adatta le spese in base alle informazioni ottenute per migliorare i risultati finanziari</li>
+</ul>
+
+<p>
+Sviluppare consapevolezza delle proprie abitudini di spesa favorisce decisioni finanziarie più intelligenti e migliori risultati nel lungo periodo.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>Impara la Gestione delle Finanze Personali Passo Dopo Passo</h2>
+
+<p>
+È disponibile un corso strutturato per chi desidera padroneggiare il monitoraggio delle spese, riconoscere i modelli di spesa e migliorare le proprie abitudini finanziarie.
+</p>
+
+<a class="button" href="https://www.udemy.com/course/master-personal-finance-management-with-free-software/">
+Corso (Inglese)
+</a>
+
+<a class="button" href="https://www.udemy.com/course/maitrisez-vos-finances-avec-un-logiciel-gratuit/">
+Corso (Francese)
+</a>
+
+<a class="button" href="https://www.udemy.com/course/gestisci-le-tue-finanze-con-software-gratuito/">
+Corso (Italiano)
+</a>
+
+<a class="button" href="https://www.udemy.com/course/gerencie-suas-financas-com-software-gratuito/">
+Corso (Portoghese)
+</a>
+
+<p>
+Puoi anche esplorare il programma completo del corso e le descrizioni dettagliate delle lezioni.
+</p>
+
+<a class="button" href="Contenido.html">
+Visualizza il Programma Completo del Corso
+</a>
+
+</div>
+
+<div class="section">
+
+<h2>Conclusione</h2>
+
+<p>
+Scoprire i propri modelli di spesa mette in evidenza come le piccole abitudini quotidiane si accumulino nel tempo. Con maggiore consapevolezza e informazioni concrete, puoi ridurre le spese inutili, allocare le risorse in modo più efficiente e rafforzare la tua stabilità finanziaria a lungo termine.
+</p>
+
+<a class="button" href="https://www.dropbox.com/scl/fi/w857cfimlerq19gtxyxo9/Stocks.rar?rlkey=kn06ugzajdyi4suja1hboe92u&st=96866jmr&dl=1">
+Scarica Ora
+</a>
+
+</div>
+
+<div class="section">
+
+<h2>Contatti e Supporto</h2>
+
+<p>
+Questo software è stato sviluppato da un investitore indipendente e sviluppatore software con l'obiettivo di fornire uno strumento potente per la gestione delle finanze personali che rimanga gratuito e accessibile a tutti.
+</p>
+
+<p>
+Se hai domande, suggerimenti o commenti sul software, non esitare a contattarci. I feedback degli utenti vengono attentamente analizzati e considerati durante l'implementazione di futuri miglioramenti e nuove funzionalità.
+</p>
+
+<p>
+Email: <a href="mailto:valueinvestingsoftware@gmail.com">valueinvestingsoftware@gmail.com</a>
+</p>
+
+<p>
+Per sviluppatori, aziende o persone interessate a costruire soluzioni basate su questo progetto, il codice sorgente completo del software è disponibile per l'acquisto.
+</p>
+
+<p>
+Feedback costruttivi, idee di miglioramento e proposte di collaborazione sono sempre benvenuti.
+</p>
 
 </div>
 
